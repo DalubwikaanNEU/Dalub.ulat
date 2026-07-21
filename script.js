@@ -1,9 +1,7 @@
-// ============================
 // DALUB-ULAT SCRIPT
-// ============================
 
 
-// CHARACTER COUNTER
+// Character Counter
 
 const reportBox = document.getElementById("report");
 const counter = document.getElementById("count");
@@ -21,20 +19,15 @@ if(reportBox && counter){
 
 
 
-// GENERATE REFERENCE NUMBER
+// Generate Reference Number
 
 function generateReference(){
 
-    const date = new Date();
+    let year = new Date().getFullYear();
 
-    const year = date.getFullYear();
-
-    const random =
-    Math.floor(
-        100000 +
-        Math.random() * 900000
+    let random = Math.floor(
+        100000 + Math.random() * 900000
     );
-
 
     return "DU-" + year + "-" + random;
 
@@ -42,7 +35,7 @@ function generateReference(){
 
 
 
-// FORM SUBMISSION
+// Form Submission
 
 const form = document.getElementById("reportForm");
 
@@ -52,14 +45,7 @@ if(form){
 form.addEventListener("submit", function(){
 
 
-    let reference =
-    generateReference();
-
-
-    document.getElementById(
-        "referenceNumber"
-    ).value = reference;
-
+    let reference = generateReference();
 
 
     localStorage.setItem(
@@ -68,7 +54,19 @@ form.addEventListener("submit", function(){
     );
 
 
+    let refInput = document.getElementById(
+        "referenceNumber"
+    );
+
+
+    if(refInput){
+
+        refInput.value = reference;
+
+    }
+
 
 });
+
 
 }
