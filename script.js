@@ -1,12 +1,9 @@
-/* ==========================
-   DALUB-ULAT SCRIPT.JS
-   Dalubwikaan Reporting System
-========================== */
+// ============================
+// DALUB-ULAT SCRIPT
+// ============================
 
 
-/* ==========================
-   CHARACTER COUNTER
-========================== */
+// CHARACTER COUNTER
 
 const reportBox = document.getElementById("report");
 const counter = document.getElementById("count");
@@ -24,30 +21,28 @@ if(reportBox && counter){
 
 
 
-/* ==========================
-   REFERENCE NUMBER GENERATOR
-========================== */
-
+// GENERATE REFERENCE NUMBER
 
 function generateReference(){
 
-    let year = new Date().getFullYear();
+    const date = new Date();
 
-    let randomNumber = Math.floor(
-        100000 + Math.random() * 900000
+    const year = date.getFullYear();
+
+    const random =
+    Math.floor(
+        100000 +
+        Math.random() * 900000
     );
 
 
-    return "DU-" + year + "-" + randomNumber;
+    return "DU-" + year + "-" + random;
 
 }
 
 
 
-/* ==========================
-   SAVE REFERENCE NUMBER
-========================== */
-
+// FORM SUBMISSION
 
 const form = document.getElementById("reportForm");
 
@@ -57,7 +52,14 @@ if(form){
 form.addEventListener("submit", function(){
 
 
-    let reference = generateReference();
+    let reference =
+    generateReference();
+
+
+    document.getElementById(
+        "referenceNumber"
+    ).value = reference;
+
 
 
     localStorage.setItem(
@@ -66,13 +68,7 @@ form.addEventListener("submit", function(){
     );
 
 
-    localStorage.setItem(
-        "dalubUlatDate",
-        new Date().toLocaleDateString("tl-PH")
-    );
-
 
 });
-
 
 }
