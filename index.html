@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dalub-Ulat | Opisyal na Sistema ng Pag-uulat</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+    <div class="hero-overlay">
+
+        <div class="hero-content">
+
+            <h1>📜 Dalub-Ulat</h1>
+
+            <p>
+
+                Isang ligtas, kompidensiyal, at makabagong sistema ng
+                pagsusumite ng mga ulat, reklamo, mungkahi,
+                at iba pang suliranin para sa kapakanan
+                ng bawat kasapi ng Dalubwikaan.
+
+            </p>
+
+            <a href="#reportForm" class="hero-btn">
+
+                Magpasa ng Ulat
+
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main>
+
+<section class="about">
+
+    <h2>Maligayang Pagdating!</h2>
+
+    <div class="about-card">
+
+        <p>
+
+            Ang <strong>Dalub-Ulat</strong> ay opisyal na online reporting
+            platform ng <strong>Dalubwikaan</strong>.
+            Layunin nitong maging ligtas na espasyo upang
+            maipahayag ng bawat mag-aaral ang kanilang
+            mga reklamo, mungkahi, obserbasyon, at
+            iba pang mahahalagang ulat.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="report-section">
+
+    <div class="form-card">
+
+        <h2>📝 Pormularyo ng Pag-uulat</h2>
+
+        <p class="subtitle">
+
+            Mangyaring punan ang mga kinakailangang
+            impormasyon sa ibaba.
+
+        </p>
+
+        <form
+
+            id="reportForm"
+
+            action="https://api.web3forms.com/submit"
+
+            method="POST">
+
+            <!-- 14ce61c8-4a2f-4a1b-8538-f2610115295b -->
+            <input
+                type="hidden"
+                name="access_key"
+                value="ILAGAY_DITO_ANG_BAGONG_ACCESS_KEY">
+
+            <input
+                type="hidden"
+                name="subject"
+                value="Bagong Ulat mula sa Dalub-Ulat">
+
+            <input
+                type="hidden"
+                name="from_name"
+                value="Dalub-Ulat">
+
+            <input
+                type="checkbox"
+                name="botcheck"
+                style="display:none;">
+
+            <label>
+
+                Pangalan (Opsyonal)
+
+            </label>
+
+            <input
+                type="text"
+                name="Pangalan"
+                placeholder="Maaaring iwanang blangko">
+
+            <label>
+
+                Email (Opsyonal)
+
+            </label>
+
+            <input
+                type="email"
+                name="Email"
+                placeholder="pangalan@email.com">
+
+            <label>
+
+                Kategorya
+
+            </label>
+
+            <select
+                name="Kategorya"
+                required>
+
+                <option value="">Pumili ng Kategorya</option>
+
+                <option>Reklamo</option>
+
+                <option>Suhestiyon</option>
+
+                <option>Paglabag sa Patakaran</option>
+
+                <option>Pang-aabuso</option>
+
+                <option>Diskriminasyon</option>
+
+                <option>Hindi Maayos na Serbisyo</option>
+
+                <option>Iba pa</option>
+
+            </select>
+
+            <label>
+
+                Opisina o Taong Sangkot (Opsyonal)
+
+            </label>
+
+            <input
+                type="text"
+                name="Sangkot"
+                placeholder="Halimbawa: Finance Committee">
+
+            <label>
+
+                Isulat ang Iyong Ulat
+
+            </label>
+
+            <textarea
+
+                id="report"
+
+                name="Ulat"
+
+                rows="8"
+
+                maxlength="2000"
+
+                required
+
+                placeholder="Ilarawan nang malinaw ang iyong ulat o reklamo..."></textarea>
+
+            <div class="counter">
+
+                <span id="count">0</span>/2000
+
+            </div>
+
+            <label>
+
+                Link ng Larawan o Ebidensya (Opsyonal)
+
+            </label>
+
+            <input
+
+                type="url"
+
+                name="Google Drive Link"
+
+                placeholder="https://drive.google.com/file/d/...">
+
+            <p class="guide">
+
+                📷 Kung may larawan o dokumentong nais ilakip,
+                i-upload muna ito sa Google Drive,
+                itakda ang access sa
+                <strong>Anyone with the link</strong>,
+                at pagkatapos ay idikit ang link dito.
+
+            </p>
