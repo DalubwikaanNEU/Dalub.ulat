@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Salamat | Dalub-Ulat</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+.thank-container{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#faf6ef;
+
+    padding:20px;
+
+}
+
+
+.thank-card{
+
+    background:white;
+
+    max-width:600px;
+
+    width:100%;
+
+    text-align:center;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    animation:appear .8s ease;
+
+}
+
+
+.check{
+
+    font-size:80px;
+
+    animation:bounce 1s infinite alternate;
+
+}
+
+
+.thank-card h1{
+
+    color:#704214;
+
+    margin:20px 0;
+
+}
+
+
+.reference{
+
+    margin:25px 0;
+
+    padding:20px;
+
+    background:#fff3cd;
+
+    border-radius:20px;
+
+    border-left:6px solid #d6a354;
+
+}
+
+
+.reference span{
+
+    display:block;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#704214;
+
+    margin-top:10px;
+
+    letter-spacing:2px;
+
+}
+
+
+.back-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    background:#704214;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+
+.back-btn:hover{
+
+    background:#4e2d13;
+
+    transform:translateY(-5px);
+
+}
+
+
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+@keyframes bounce{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-15px);
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="thank-container">
+
+
+<div class="thank-card">
+
+
+<div class="check">
+
+✅
+
+</div>
+
+
+<h1>
+
+Matagumpay!
+
+</h1>
+
+
+<p>
+
+Maraming salamat sa pagsusumite ng iyong ulat.
+
+</p>
+
+
+<div class="reference">
+
+<strong>
+
+Reference Number
+
+</strong>
+
+
+<span id="referenceNumber">
+
+NEU-2026-000000
+
+</span>
+
+
+</div>
+
+
+<p>
+
+Sinusuri na ng mga opisyales ang nasabing ulat o reklamo.
+
+Ang iyong pakikilahok ay mahalaga sa pagpapanatili ng
+maayos, ligtas, at masikhay na paglalakabay.
+
+</p>
+
+
+<a href="index.html" class="back-btn">
+
+⬅ Bumalik sa Dalub-Ulat
+
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+let reference = localStorage.getItem(
+"dalubUlatReference"
+);
+
+
+if(reference){
+
+document.getElementById(
+"referenceNumber"
+).textContent = reference;
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
