@@ -1,0 +1,558 @@
+/* =========================
+   DALUB-ULAT STYLE CSS
+   Dalubwikaan Reporting System
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#faf6ef;
+
+    color:#3b2a1f;
+
+    line-height:1.6;
+
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+
+    min-height:85vh;
+
+    background:
+    linear-gradient(
+        rgba(74,45,20,0.65),
+        rgba(74,45,20,0.65)
+    ),
+    url("https://images.unsplash.com/photo-1518005020951-eccb494ad742");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+
+.hero-overlay{
+
+    width:100%;
+
+    padding:50px 20px;
+
+}
+
+
+.hero-content{
+
+    max-width:800px;
+
+    margin:auto;
+
+    color:white;
+
+}
+
+
+.hero-content h1{
+
+    font-size:60px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    animation:fadeDown 1s ease;
+
+}
+
+
+.hero-content p{
+
+    margin:20px auto;
+
+    font-size:18px;
+
+    max-width:650px;
+
+}
+
+
+.hero-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:15px 35px;
+
+    background:#d6a354;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+.hero-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:#b77b2c;
+
+}
+
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+
+main{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:auto;
+
+}
+
+
+section{
+
+    margin:70px 0;
+
+}
+
+
+section h2{
+
+    text-align:center;
+
+    font-size:35px;
+
+    margin-bottom:30px;
+
+    color:#704214;
+
+}
+
+
+
+/* =========================
+   ABOUT
+========================= */
+
+
+.about-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    border-left:8px solid #d6a354;
+
+}
+
+
+
+/* =========================
+   FORM
+========================= */
+
+
+.form-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+
+}
+
+
+.subtitle{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#777;
+
+}
+
+
+form label{
+
+    display:block;
+
+    margin-top:20px;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    border:2px solid #eadbc8;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:#fffdf9;
+
+    transition:.3s;
+
+}
+
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    border-color:#d6a354;
+
+    transform:scale(1.01);
+
+}
+
+
+textarea{
+
+    resize:none;
+
+}
+
+
+.counter{
+
+    text-align:right;
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+
+.guide{
+
+    margin-top:10px;
+
+    font-size:14px;
+
+    color:#666;
+
+}
+
+
+
+/* =========================
+   NOTICE
+========================= */
+
+
+.notice{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    background:#fff3cd;
+
+    border-radius:20px;
+
+    border-left:6px solid #d6a354;
+
+}
+
+
+.notice h3{
+
+    color:#704214;
+
+}
+
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+
+.agreement{
+
+    margin:25px 0;
+
+}
+
+
+.agreement input{
+
+    width:auto;
+
+    margin-right:8px;
+
+}
+
+
+
+/* =========================
+   BUTTON
+========================= */
+
+
+.submit-btn,
+button{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#704214;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+.submit-btn:hover,
+button:hover{
+
+    background:#4e2d13;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* =========================
+   FEATURES
+========================= */
+
+
+.features{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+
+.feature-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+.feature-card h3{
+
+    color:#704214;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* =========================
+   FAQ
+========================= */
+
+
+.faq-item{
+
+    background:white;
+
+    padding:25px;
+
+    margin-bottom:20px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+
+.faq-item h3{
+
+    color:#704214;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer{
+
+    background:#3b2a1f;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+
+footer h2{
+
+    color:#d6a354;
+
+}
+
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:768px){
+
+
+.hero-content h1{
+
+    font-size:40px;
+
+}
+
+
+.form-card{
+
+    padding:25px;
+
+}
+
+
+.features{
+
+    grid-template-columns:1fr;
+
+}
+
+
+section h2{
+
+    font-size:28px;
+
+}
+
+
+}
