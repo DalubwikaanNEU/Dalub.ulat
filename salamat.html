@@ -252,22 +252,20 @@ maayos, ligtas, at masikhay na paglalakabay.
 
 <script>
 
-let reference = localStorage.getItem(
-"dalubUlatReference"
-);
+window.onload = function(){
 
+    const reference = localStorage.getItem("dalubUlatReference");
 
-if(reference){
+    if(reference){
 
-document.getElementById(
-"referenceNumber"
-).textContent = reference;
+        document.getElementById("referenceNumber").textContent = reference;
+
+    }else{
+
+        document.getElementById("referenceNumber").textContent = "Hindi available";
+
+    }
 
 }
 
-</script>
-
-
-</body>
-
-</html>
+</script> 
